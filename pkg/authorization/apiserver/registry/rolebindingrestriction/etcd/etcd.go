@@ -32,7 +32,7 @@ func (r *REST) NamespaceScoped() bool {
 }
 
 func (r *REST) Get(ctx context.Context, name string, options *metav1.GetOptions) (runtime.Object, error) {
-	return nil, errors.NewInternalError(fmt.Errorf("unsupported"))
+	return nil, errors.NewInternalError(fmt.Errorf("GET for RoleBindingRestriction unsupported"))
 }
 
 func (r *REST) NewList() runtime.Object {
@@ -40,7 +40,7 @@ func (r *REST) NewList() runtime.Object {
 }
 
 func (r *REST) List(ctx context.Context, options *metainternalversion.ListOptions) (runtime.Object, error) {
-	return nil, errors.NewInternalError(fmt.Errorf("unsupported"))
+	return nil, errors.NewInternalError(fmt.Errorf("LIST for RoleBindingRestriction unsupported"))
 }
 
 func (r *REST) New() runtime.Object {
@@ -64,7 +64,7 @@ func (r *REST) DeleteCollection(ctx context.Context, validation rest.ValidateObj
 }
 
 func (r *REST) Watch(ctx context.Context, options *metainternalversion.ListOptions) (watch.Interface, error) {
-	return nil, errors.NewInternalError(fmt.Errorf("unsupported"))
+	return nil, errors.NewInternalError(fmt.Errorf("WATCH for RoleBindingRestriction unsupported"))
 }
 
 func (r *REST) ConvertToTable(ctx context.Context, object runtime.Object, tableOptions runtime.Object) (*metav1.Table, error) {
